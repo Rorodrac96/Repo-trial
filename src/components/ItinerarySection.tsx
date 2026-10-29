@@ -5,12 +5,12 @@ import { Sparkles, MapPin, Sun, Music, Heart, Utensils, Award } from 'lucide-rea
 export const ItinerarySection: React.FC = () => {
   const schedule: ScheduleItem[] = [
     {
-      id: 'sakharpuda',
-      marathiTitle: 'साखरपुडा समारंभ (संपन्न)',
+      id: 'gandh',
+      marathiTitle: 'गंध समारंभ (संपन्न)',
       time: 'रविवार, १३ सप्टेंबर २०२६ • संपन्न',
       location: 'कौटुंबिक सोहळा',
-      description: 'साखरपुड्याचा मंगल विधी, पेढ्यांचा गोडवा व सुवर्ण मुद्रिका प्रदान सोहळा दोन्ही कुटुंबीयांच्या साक्षीने सानंद संपन्न झाला.',
-      icon: 'sangeet',
+      description: 'गंध व हळदी-कुंकवाचा मांगलिक विधी दोन्ही कुटुंबीय व आप्तेष्टांच्या उपस्थितीत सानंद संपन्न झाला.',
+      icon: 'puja',
     },
     {
       id: 'haldi',
@@ -37,6 +37,14 @@ export const ItinerarySection: React.FC = () => {
       icon: 'puja',
     },
     {
+      id: 'sakharpuda',
+      marathiTitle: 'साखरपुडा सोहळा',
+      time: 'बुधवार, २५ नोव्हेंबर • शुभ मुहूर्तापूर्वी',
+      location: 'मुख्य विवाह मंडप',
+      description: 'साखरपुड्याचा गोडवा, सुवर्ण मुद्रिका प्रदान व वधू-वरांचा साखरपुडा सोहळा.',
+      icon: 'award',
+    },
+    {
       id: 'vivah',
       marathiTitle: 'शुभ विवाह मुहूर्त (सप्तपदी व कन्यादान)',
       time: 'बुधवार, २५ नोव्हेंबर • दुपारी ११:३५ वा.',
@@ -51,6 +59,14 @@ export const ItinerarySection: React.FC = () => {
       location: 'अन्नपूर्णा भोजन दालन',
       description: 'केळीच्या पानांवर साजूक तुपातील गरमागरम पुरणपोळी, श्रीखंड-पुरी, मसाले भात, आमटी आणि थंडगार सोलकढीची पंगत.',
       icon: 'puja',
+    },
+    {
+      id: 'vaarat',
+      marathiTitle: 'भव्य वरात (सवाद्य मिरवणूक)',
+      time: 'बुधवार, २५ नोव्हेंबर • संध्याकाळी ०५:३० वा.',
+      location: 'नंदनवन लॉन्स परिसर',
+      description: 'ढोल-ताशांचा गजर, सनई-चौघडा, आतषबाजी आणि नवदाम्पत्याची सवाद्य व उत्साही भव्य वरात.',
+      icon: 'sangeet',
     },
     {
       id: 'reception',
@@ -70,6 +86,7 @@ export const ItinerarySection: React.FC = () => {
         return <Music className="h-5 w-5 text-amber-600" />;
       case 'vivah':
         return <Heart className="h-5 w-5 text-red-700" />;
+      case 'award':
       case 'reception':
         return <Award className="h-5 w-5 text-amber-600" />;
       case 'puja':
@@ -127,7 +144,7 @@ export const ItinerarySection: React.FC = () => {
                 <h3 className="font-devanagari text-xl sm:text-2xl font-bold text-red-950">
                   {item.marathiTitle}
                 </h3>
-                {item.id === 'sakharpuda' && (
+                {item.id === 'gandh' && (
                   <span className="rounded-full bg-emerald-100 border border-emerald-500/40 px-2.5 py-0.5 text-xs font-devanagari font-bold text-emerald-800">
                     सस्नेह संपन्न
                   </span>

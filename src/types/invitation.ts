@@ -42,7 +42,7 @@ export interface ScheduleItem {
   time: string;
   location: string;
   description: string;
-  icon: 'haldi' | 'sangeet' | 'vivah' | 'reception' | 'puja';
+  icon: 'haldi' | 'sangeet' | 'vivah' | 'reception' | 'puja' | 'award';
 }
 
 export interface StoryMilestone {

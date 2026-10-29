@@ -35,7 +35,7 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ details }) => {
         {/* Traditional Royal Details Block without Red Button */}
         <div className="mt-8 mx-auto max-w-md rounded-2xl border border-amber-500/30 bg-amber-50/60 p-6 text-center space-y-2.5">
           <p className="font-devanagari text-base font-bold text-red-950">
-            {details.brideName} संग {details.groomName}
+            {details.brideName} व {details.groomName}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-xs sm:text-sm text-stone-800 font-devanagari font-bold pt-1">
             <div className="flex items-center gap-1.5">

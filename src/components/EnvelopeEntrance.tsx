@@ -79,7 +79,7 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({
               </h2>
               <div className="my-1.5 flex items-center justify-center gap-2">
                 <div className="h-px w-8 bg-amber-600/40" />
-                <span className="font-devanagari text-xl text-amber-700 font-bold">संग</span>
+                <span className="font-devanagari text-xl text-amber-700 font-bold">व</span>
                 <div className="h-px w-8 bg-amber-600/40" />
               </div>
               <h2 className="font-rozha text-3xl sm:text-4xl text-red-900 font-normal">
