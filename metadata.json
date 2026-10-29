@@ -1,0 +1,6 @@
+{
+  "name": "Shubh Vivah - Royal Maharashtrian Wedding Invitation",
+  "description": "An exquisite Royal Indian Maharashtrian wedding invitation featuring auspicious Vedic blessings, gold Paithani motifs, floral Petals, royal itinerary, and seamless RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
