@@ -22,7 +22,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
         </div>
 
         <h3 className="font-rozha text-3xl sm:text-4xl font-normal text-red-950">
-          {details.brideName} संग {details.groomName}
+          {details.groomName} व {details.brideName}
         </h3>
 
         <p className="font-devanagari text-xs tracking-[0.25em] uppercase text-amber-900 font-bold mt-1">

@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div>
             <div className="font-devanagari text-base leading-tight font-bold text-red-950 group-hover:text-red-800">
-              {details.brideName.replace(/चि\.\s*|सौ\.\s*|का\.\s*/g, '').trim()} व {details.groomName.replace(/चि\.\s*/g, '').trim()}
+              {details.groomName.replace(/चि\.\s*/g, '').trim()} व {details.brideName.replace(/चि\.\s*|सौ\.\s*|का\.\s*/g, '').trim()}
             </div>
             <div className="font-devanagari text-[10px] tracking-wider text-amber-800 font-bold">
               शुभ विवाह सोहळा

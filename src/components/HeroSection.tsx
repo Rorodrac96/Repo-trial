@@ -16,7 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2026-11-25T11:35:00').getTime();
+    const targetDate = new Date('2026-11-25T13:55:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -83,36 +83,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
           &ldquo;शुभमंगल सावधान! दोन मनांचे, दोन कुळांचे मंगल मीलन, सुवर्ण क्षणांचा साक्षीदार सोहळा.&rdquo;
         </p>
 
-        {/* Couple Names - शुद्ध मराठी */}
+        {/* Couple Names - शुद्ध मराठी (वर चि. जसराज वर आणि वधू चि. सौ. का. अंकिता खाली) */}
         <div className="my-6 w-full max-w-3xl">
-          <p className="font-devanagari text-base sm:text-lg text-amber-900 font-bold mb-1">
-            चि. सौ. का.
-          </p>
-          <h1 className="font-rozha text-5xl sm:text-7xl md:text-8xl font-normal text-red-900 tracking-wide drop-shadow-sm">
-            {details.brideName.replace(/चि\.\s*|सौ\.\s*|का\.\s*/g, '').trim()}
-          </h1>
-          {details.brideLineage && details.brideLineage.length > 0 ? (
-            <div className="font-devanagari text-sm sm:text-base text-stone-800 font-medium mt-3 space-y-1 max-w-2xl mx-auto leading-relaxed">
-              {details.brideLineage.map((line, idx) => (
-                <p key={idx} className={idx === 2 ? 'text-amber-950 font-bold text-xs sm:text-sm pt-0.5' : ''}>
-                  {line}
-                </p>
-              ))}
-            </div>
-          ) : (
-            <p className="font-devanagari text-sm sm:text-base text-stone-700 font-semibold mt-1">
-              {details.brideFamily}
-            </p>
-          )}
-
-          <div className="my-6 flex items-center justify-center gap-4">
-            <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
-            <span className="font-devanagari text-3xl sm:text-4xl text-amber-700 font-bold leading-none">
-              व
-            </span>
-            <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
-          </div>
-
           <p className="font-devanagari text-base sm:text-lg text-amber-900 font-bold mb-1">
             चि.
           </p>
@@ -130,6 +102,34 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
           ) : (
             <p className="font-devanagari text-sm sm:text-base text-stone-700 font-semibold mt-1">
               {details.groomFamily}
+            </p>
+          )}
+
+          <div className="my-6 flex items-center justify-center gap-4">
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
+            <span className="font-devanagari text-3xl sm:text-4xl text-amber-700 font-bold leading-none">
+              व
+            </span>
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
+          </div>
+
+          <p className="font-devanagari text-base sm:text-lg text-amber-900 font-bold mb-1">
+            चि. सौ. का.
+          </p>
+          <h1 className="font-rozha text-5xl sm:text-7xl md:text-8xl font-normal text-red-900 tracking-wide drop-shadow-sm">
+            {details.brideName.replace(/चि\.\s*|सौ\.\s*|का\.\s*/g, '').trim()}
+          </h1>
+          {details.brideLineage && details.brideLineage.length > 0 ? (
+            <div className="font-devanagari text-sm sm:text-base text-stone-800 font-medium mt-3 space-y-1 max-w-2xl mx-auto leading-relaxed">
+              {details.brideLineage.map((line, idx) => (
+                <p key={idx} className={idx === 2 ? 'text-amber-950 font-bold text-xs sm:text-sm pt-0.5' : ''}>
+                  {line}
+                </p>
+              ))}
+            </div>
+          ) : (
+            <p className="font-devanagari text-sm sm:text-base text-stone-700 font-semibold mt-1">
+              {details.brideFamily}
             </p>
           )}
         </div>
