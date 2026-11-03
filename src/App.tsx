@@ -87,19 +87,19 @@ export default function App() {
         {/* Hero Section (Auspicious Shloka, Couple Names, Date, Muhurat, Countdown, View Ceremonies button) */}
         <HeroSection details={details} />
 
-        {/* Auspicious Ceremonies & Shubh Muhurat Timeline */}
+        {/* Auspicious Ceremonies & Shubh Muhurat Timeline (Ends with Satyanarayan Pooja) */}
         <ItinerarySection />
+
+        {/* Palace Grounds & Venue Logistics (Directly below Satyanarayan Pooja) */}
+        <VenueSection details={details} />
 
         {/* Our Journey / रेशीमगाठ */}
         <StorySection />
 
-        {/* Palace Grounds & Venue Logistics */}
-        <VenueSection details={details} />
-
         {/* Royal Gallery & Lightbox */}
         <GallerySection />
 
-        {/* Royal Invitation Section (Ends at Nimantrak: Samast Nirmal & Chatur Parivar) */}
+        {/* Royal Invitation Section (Ends at Nimantrak: Samast Chatur va Nirmal Parivar) */}
         <RSVPSection details={details} />
       </div>
     </div>

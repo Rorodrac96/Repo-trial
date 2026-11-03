@@ -48,11 +48,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button onClick={() => scrollTo('rituals')} className="hover:text-red-900 transition">
             विधी व मुहूर्त
           </button>
-          <button onClick={() => scrollTo('story')} className="hover:text-red-900 transition">
-            कथा
-          </button>
           <button onClick={() => scrollTo('venue')} className="hover:text-red-900 transition">
             विवाहस्थळ
+          </button>
+          <button onClick={() => scrollTo('story')} className="hover:text-red-900 transition">
+            कथा
           </button>
           <button onClick={() => scrollTo('gallery')} className="hover:text-red-900 transition">
             क्षणचित्रे
