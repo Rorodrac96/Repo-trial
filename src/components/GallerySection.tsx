@@ -5,6 +5,7 @@ interface GalleryPhotoItem {
   id: number;
   sources: string[];
   label: string;
+  previewPosition?: string;
 }
 
 const GALLERY_ITEMS: GalleryPhotoItem[] = [
@@ -30,8 +31,13 @@ const GALLERY_ITEMS: GalleryPhotoItem[] = [
   },
   {
     id: 5,
-    sources: ['/pic5_web.jpg', '/assets/aistudio/pic5_778e54dd.jpg', '/pic5.jpg'],
+    sources: [
+      '/pic5_web.jpg',
+      '/assets/aistudio/pic5-2_f5da6bcb.jpg',
+      '/pic5.jpg',
+    ],
     label: 'फोटो ५',
+    previewPosition: '50% 25%',
   },
   {
     id: 6,
@@ -42,6 +48,7 @@ const GALLERY_ITEMS: GalleryPhotoItem[] = [
     id: 7,
     sources: ['/pic7_web.jpg', '/assets/aistudio/Pic7_ecdb9a9e.jpg', '/pic7.jpg'],
     label: 'फोटो ७',
+    previewPosition: 'center 40%',
   },
 ];
 
@@ -84,6 +91,7 @@ const PhotoDisplay: React.FC<{
       alt=""
       onError={handleError}
       className={className}
+      style={!inModal && item.previewPosition ? { objectPosition: item.previewPosition } : undefined}
       loading={inModal ? 'eager' : 'lazy'}
       decoding="async"
     />
@@ -178,7 +186,7 @@ export const GallerySection: React.FC = () => {
             onClick={() => setActivePhotoIndex(i)}
             className="group relative cursor-pointer overflow-hidden rounded-3xl border-2 border-amber-600/30 bg-[#ffffff] p-2 shadow-md transition-all duration-500 hover:border-amber-600 hover:-translate-y-1.5"
           >
-            <div className="relative h-72 sm:h-80 w-full overflow-hidden rounded-2xl bg-amber-50/40">
+            <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-amber-50/40">
               <PhotoDisplay
                 item={item}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
