@@ -16,7 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2026-11-25T13:55:00').getTime();
+    const targetDate = new Date('2026-11-25T12:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();

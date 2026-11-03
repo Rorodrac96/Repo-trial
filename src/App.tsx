@@ -28,7 +28,7 @@ const DEFAULT_INDIAN_DETAILS: EventDetails = {
   ],
   monogram: 'शुभ',
   eventDate: 'बुधवार, २५ नोव्हेंबर २०२६',
-  muhuratTime: 'दुपारी ०१:५५ वा.',
+  muhuratTime: 'दुपारी १२:०० वा.',
   venueName: 'नंदनवन लॉन्स',
   venueAddress: 'भाळवणी, ता. पारनेर',
   venueCityState: 'जि. अहिल्यानगर, महाराष्ट्र',
