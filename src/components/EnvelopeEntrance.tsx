@@ -98,14 +98,25 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({
 
             <div className="my-4 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
 
-            {/* Recipient Guest Label */}
+            {/* Recipient Guest & Nimantrak Label */}
             <div className="space-y-1">
               <p className="font-devanagari text-xs font-bold text-amber-800">
                 सस्नेह निमंत्रण
               </p>
-              <p className="font-devanagari text-lg sm:text-xl font-bold text-stone-900">
-                {guestName || 'चतुर परिवार'}
-              </p>
+              {guestName && !guestName.includes('परिवार') ? (
+                <>
+                  <p className="font-devanagari text-lg sm:text-xl font-bold text-stone-900">
+                    {guestName}
+                  </p>
+                  <p className="font-devanagari text-xs font-semibold text-amber-900">
+                    निमंत्रक: चतुर व निर्मळ परिवार
+                  </p>
+                </>
+              ) : (
+                <p className="font-devanagari text-lg sm:text-xl font-bold text-stone-900">
+                  {guestName && guestName !== 'चतुर परिवार' ? guestName : 'निमंत्रक: चतुर व निर्मळ परिवार'}
+                </p>
+              )}
             </div>
 
             <p className="mt-4 font-devanagari text-xs tracking-wider text-stone-800 font-bold">

@@ -76,6 +76,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
           <p className="font-devanagari text-sm font-bold text-amber-900 mt-1">
             शुभ विवाह सोहळा
           </p>
+          <p className="font-devanagari text-xs sm:text-sm font-semibold text-stone-700 mt-0.5">
+            निमंत्रक: चतुर व निर्मळ परिवार
+          </p>
         </div>
 
         {/* Sacred Mangalashtak Quote */}

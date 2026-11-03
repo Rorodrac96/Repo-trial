@@ -53,7 +53,7 @@ export default function App() {
       const guest = params.get('guest');
       if (guest) return guest;
     }
-    return 'चतुर परिवार';
+    return 'निमंत्रक: चतुर व निर्मळ परिवार';
   });
 
   // Handle envelope opened: smooth silent unroll
