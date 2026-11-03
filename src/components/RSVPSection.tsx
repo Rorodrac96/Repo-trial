@@ -8,7 +8,7 @@ interface RSVPSectionProps {
 
 export const RSVPSection: React.FC<RSVPSectionProps> = ({ details }) => {
   return (
-    <section id="invitation" className="relative py-24 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+    <section id="invitation" className="relative pt-4 pb-10 px-4 sm:px-6 max-w-4xl mx-auto text-center">
       {/* Light Sandalwood / Paithani Border Callout Card */}
       <div className="relative rounded-3xl border-2 border-amber-600/35 bg-[#ffffff] p-8 sm:p-14 shadow-lg backdrop-blur">
         {/* Top Auspicious Crest */}
@@ -65,8 +65,8 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ details }) => {
             </a>
           </div>
 
-          <p className="text-xs font-devanagari text-stone-700 pt-3 border-t border-amber-200 font-semibold">
-            निमंत्रक: समस्त निर्मळ व चतुर परिवार आणि आप्तस्वकीय
+          <p className="text-sm font-devanagari text-red-950 pt-4 border-t border-amber-300 font-bold">
+            निमंत्रक: समस्त चतुर व निर्मळ परिवार
           </p>
         </div>
       </div>

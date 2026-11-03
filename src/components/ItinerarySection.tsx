@@ -5,57 +5,25 @@ import { Sparkles, MapPin, Sun, Music, Heart, Utensils, Award } from 'lucide-rea
 export const ItinerarySection: React.FC = () => {
   const schedule: ScheduleItem[] = [
     {
-      id: 'gandh',
-      marathiTitle: 'गंध समारंभ (संपन्न)',
-      time: 'रविवार, १३ सप्टेंबर २०२६ • संपन्न',
-      location: 'कौटुंबिक सोहळा',
-      description: 'गंध व हळदी-कुंकवाचा मांगलिक विधी दोन्ही कुटुंबीय व आप्तेष्टांच्या उपस्थितीत सानंद संपन्न झाला.',
-      icon: 'puja',
-    },
-    {
-      id: 'haldi',
-      marathiTitle: 'हळद समारंभ',
-      time: 'मंगळवार, २४ नोव्हेंबर • संध्याकाळी ०४:३० वा.',
-      location: 'सुवर्ण प्रांगण',
-      description: 'सुवासिक हळद, चंदन उटी, ढोल-ताशांचा गजर, झेंडूच्या फुलांचा वर्षाव आणि पारंपारिक हळदीचा मंगल सोहळा.',
-      icon: 'haldi',
-    },
-    {
-      id: 'sangeet',
-      marathiTitle: 'संगीत रजनी व मेंदी सोहळा',
-      time: 'मंगळवार, २४ नोव्हेंबर • संध्याकाळी ०७:०० वा.',
-      location: 'भव्य राजदरबार',
-      description: 'वधूच्या हातांवर सुबक मेंदी, पारंपारिक लोकगीते आणि सहकुटुंब संगीताची रंगतदार मैफल.',
-      icon: 'sangeet',
-    },
-    {
-      id: 'seemant',
-      marathiTitle: 'सीमांत पूजन व रुखवत प्रदर्शन',
-      time: 'बुधवार, २५ नोव्हेंबर • सकाळी ०९:०० वा.',
-      location: 'तोरण दालन',
-      description: 'वर-वऱ्हाडींचे पारंपारिक स्वागत, व्याहीभेट आणि पारंपारिक मराठमोळ्या रुखवताचे विलोभनीय प्रदर्शन.',
-      icon: 'puja',
-    },
-    {
       id: 'sakharpuda',
-      marathiTitle: 'साखरपुडा सोहळा',
-      time: 'बुधवार, २५ नोव्हेंबर • शुभ मुहूर्तापूर्वी',
-      location: 'मुख्य विवाह मंडप',
-      description: 'साखरपुड्याचा गोडवा, सुवर्ण मुद्रिका प्रदान व वधू-वरांचा साखरपुडा सोहळा.',
+      marathiTitle: 'साखरपुडा, हळद, मेंदी व संगीत सोहळा',
+      time: 'मंगळवार, २४ नोव्हेंबर • संध्याकाळी ०६:०० वा.',
+      location: 'राहते घर, पिंपरी निर्मळ',
+      description: 'साखरपुडा (सुवर्ण मुद्रिका प्रदान सोहळा), सुवासिक हळद, हातांवर सुबक मेंदी आणि सहकुटुंब संगीताची रंगतदार मैफल.',
       icon: 'award',
     },
     {
       id: 'vivah',
       marathiTitle: 'शुभ विवाह मुहूर्त (सप्तपदी व कन्यादान)',
       time: 'बुधवार, २५ नोव्हेंबर • दुपारी ०१:५५ वा.',
-      location: 'मुख्य विवाह मंडप',
+      location: 'मुख्य विवाह मंडप (नंदनवन लॉन्स)',
       description: 'अंतरपाट, मंगलाष्टकांचे मंजुळ स्वर (शुभमंगल सावधान), कन्यादान, पवित्र अग्नीभोवती सप्तपदी आणि मंगळसूत्र बंधन.',
       icon: 'vivah',
     },
     {
       id: 'pangat',
       marathiTitle: 'पारंपारिक पंगत (शाही भोजन)',
-      time: 'बुधवार, २५ नोव्हेंबर • शुभमुहूर्तानंतर (दुपारी ०२:१५ वा.)',
+      time: 'बुधवार, २५ नोव्हेंबर • सकाळी ११:०० ते दुपारी ०२:०० वा.',
       location: 'अन्नपूर्णा भोजन दालन',
       description: 'केळीच्या पानांवर साजूक तुपातील गरमागरम पुरणपोळी, श्रीखंड-पुरी, मसाले भात, आमटी आणि थंडगार सोलकढीची पंगत.',
       icon: 'puja',
@@ -63,16 +31,16 @@ export const ItinerarySection: React.FC = () => {
     {
       id: 'vaarat',
       marathiTitle: 'भव्य वरात (सवाद्य मिरवणूक)',
-      time: 'बुधवार, २५ नोव्हेंबर • संध्याकाळी ०५:३० वा.',
-      location: 'नंदनवन लॉन्स परिसर',
+      time: 'बुधवार, २५ नोव्हेंबर • संध्याकाळी ०७:०० वा.',
+      location: 'जुन्नर',
       description: 'ढोल-ताशांचा गजर, सनई-चौघडा, आतषबाजी आणि नवदाम्पत्याची सवाद्य व उत्साही भव्य वरात.',
       icon: 'sangeet',
     },
     {
       id: 'reception',
-      marathiTitle: 'सत्यनारायण पूजा व भव्य स्वागत समारंभ',
-      time: 'बुधवार, २५ नोव्हेंबर • संध्याकाळी ०७:०० वा.',
-      location: 'राजप्रासाद उपवन',
+      marathiTitle: 'श्री सत्यनारायण पूजा व स्वागत समारंभ',
+      time: 'गुरुवार, २६ नोव्हेंबर • संध्याकाळी ०६:०० वा.',
+      location: 'जुन्नर',
       description: 'श्री सत्यनारायण महापूजा, पाहुण्यांचे स्वागत, नवदाम्पत्यास शुभाशीर्वाद आणि शाही भोजन सोहळा.',
       icon: 'reception',
     },
@@ -95,9 +63,9 @@ export const ItinerarySection: React.FC = () => {
   };
 
   return (
-    <section id="rituals" className="relative py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+    <section id="rituals" className="relative pt-16 pb-4 px-4 sm:px-6 max-w-5xl mx-auto">
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="text-center max-w-2xl mx-auto mb-12">
         <div className="flex items-center justify-center gap-2 mb-3">
           <Sparkles className="h-4 w-4 text-amber-600" />
           <span className="font-devanagari text-xs tracking-wider uppercase text-amber-900 font-bold">
@@ -115,7 +83,7 @@ export const ItinerarySection: React.FC = () => {
       </div>
 
       {/* Rituals Timeline Cards in Light Sandalwood / Ivory */}
-      <div className="relative border-l-2 border-amber-600/30 ml-4 sm:ml-40 pl-6 sm:pl-10 space-y-10">
+      <div className="relative border-l-2 border-amber-600/30 ml-4 sm:ml-40 pl-6 sm:pl-10 space-y-8">
         {schedule.map((item) => (
           <div key={item.id} className="relative group">
             {/* Timeline Node Icon with Kumkum / Gold border */}
@@ -144,11 +112,6 @@ export const ItinerarySection: React.FC = () => {
                 <h3 className="font-devanagari text-xl sm:text-2xl font-bold text-red-950">
                   {item.marathiTitle}
                 </h3>
-                {item.id === 'gandh' && (
-                  <span className="rounded-full bg-emerald-100 border border-emerald-500/40 px-2.5 py-0.5 text-xs font-devanagari font-bold text-emerald-800">
-                    सस्नेह संपन्न
-                  </span>
-                )}
               </div>
 
               <p className="font-devanagari text-sm text-stone-700 leading-relaxed font-normal">
@@ -156,7 +119,7 @@ export const ItinerarySection: React.FC = () => {
               </p>
 
               <div className="mt-4 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-devanagari text-amber-900 font-bold">
-                <span>पारंपारिक विधी पोशाख</span>
+                <span>{item.id !== 'vaarat' ? 'पारंपारिक विधी सोहळा' : ''}</span>
                 <span className="text-red-900">{item.time.split('•')[0]}</span>
               </div>
             </div>

@@ -9,7 +9,6 @@ import { StorySection } from './components/StorySection';
 import { VenueSection } from './components/VenueSection';
 import { GallerySection } from './components/GallerySection';
 import { RSVPSection } from './components/RSVPSection';
-import { FooterSection } from './components/FooterSection';
 
 const DEFAULT_INDIAN_DETAILS: EventDetails = {
   auspiciousShloka: '॥ श्री गणेशाय नमः ॥',
@@ -54,7 +53,7 @@ export default function App() {
       const guest = params.get('guest');
       if (guest) return guest;
     }
-    return 'आदरणीय आप्तेष्ट व परिवार';
+    return 'चतुर परिवार';
   });
 
   // Handle envelope opened: smooth silent unroll
@@ -100,14 +99,8 @@ export default function App() {
         {/* Royal Gallery & Lightbox */}
         <GallerySection />
 
-        {/* Royal Invitation Section (No red button) */}
+        {/* Royal Invitation Section (Ends at Nimantrak: Samast Nirmal & Chatur Parivar) */}
         <RSVPSection details={details} />
-
-        {/* Footer (No settings, no copyright line) */}
-        <FooterSection
-          details={details}
-          onReopenEnvelope={() => setEnvelopeOpen(false)}
-        />
       </div>
     </div>
   );

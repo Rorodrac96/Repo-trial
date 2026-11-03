@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
 import { EventDetails } from '../types/invitation';
 
@@ -26,6 +26,15 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({
       }, 700);
     }, 900);
   };
+
+  // 3-second auto-open timer so guests who don't touch the seal still see the invitation unfold
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleBreakSeal();
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [opening, opened]);
 
   return (
     <div className={`fixed inset-0 z-50 flex items-center justify-center bg-[#fdf9f0] px-4 transition-opacity duration-1000 ${opened ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
@@ -95,7 +104,7 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({
                 सस्नेह निमंत्रण
               </p>
               <p className="font-devanagari text-lg sm:text-xl font-bold text-stone-900">
-                {guestName || 'आदरणीय आप्तेष्ट व परिवार'}
+                {guestName || 'चतुर परिवार'}
               </p>
             </div>
 
@@ -124,10 +133,12 @@ export const EnvelopeEntrance: React.FC<EnvelopeEntranceProps> = ({
         </div>
 
         {/* Action Prompt */}
-        <div className="mt-12 flex items-center gap-2 text-center text-xs tracking-widest font-bold text-amber-900 animate-pulse font-devanagari">
-          <Sparkles className="h-4 w-4 text-amber-600" />
-          <span>राजमुद्रा स्पर्श करा • लग्नपत्रिका उघडा</span>
-          <Sparkles className="h-4 w-4 text-amber-600" />
+        <div className="mt-12 flex flex-col items-center gap-1.5 text-center">
+          <div className="flex items-center gap-2 text-xs tracking-widest font-bold text-amber-900 font-devanagari">
+            <Sparkles className="h-4 w-4 text-amber-600" />
+            <span>राजमुद्रेला स्पर्श करा</span>
+            <Sparkles className="h-4 w-4 text-amber-600" />
+          </div>
         </div>
 
         <p className="mt-2 text-xs text-stone-700 font-devanagari font-semibold">

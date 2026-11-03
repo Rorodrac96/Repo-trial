@@ -1,6 +1,5 @@
 import React from 'react';
 import { StoryMilestone } from '../types/invitation';
-import { Sparkles } from 'lucide-react';
 
 export const StorySection: React.FC = () => {
   const milestones: StoryMilestone[] = [
@@ -8,19 +7,19 @@ export const StorySection: React.FC = () => {
       year: 'पहिला संवाद • २०२२',
       title: 'पहिल्या भेटीची गोड आठवण',
       description:
-        'पुण्याच्या ऐतिहासिक वातावरणात, आदरणीय कुटुंबीयांच्या साक्षीने झालेली पहिली औपचारिक भेट. एका क्षणात विचारांचे सूर जुळले आणि नवीन प्रवासाची सुंदर सुरुवात झाली.',
+        'पुण्याच्या ऐतिहासिक वातावरणात, आदरणीय कुटुंबीयांच्या साक्षीने झालेली पहिली औपचारिक भेट.',
       imageUrl:
         'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80',
-      quote: '“एक क्षण, एक भेट आणि आयुष्यभराचा अतूट विश्वास.”',
+      quote: '',
     },
     {
-      year: 'गंध समारंभ • १३ सप्टेंबर',
-      title: 'गंध सोहळा (संपन्न)',
+      year: 'साखरपुडा सोहळा • २४ नोव्हेंबर',
+      title: 'साखरपुडा, हळद व संगीत सोहळा',
       description:
-        'वडिलधाऱ्यांचे मंगल आशीर्वाद, गंध व हळदी-कुंकवाचा पावन विधी. १३ सप्टेंबर रोजी दोन्ही कुटुंबीयांच्या उपस्थितीत गंध सोहळा सानंद संपन्न झाला.',
+        'वडिलधाऱ्यांचे मंगल आशीर्वाद, सुवर्ण मुद्रिका प्रदान साखरपुडा, सुवासिक हळद व दोन्ही कुटुंबीयांच्या उपस्थितीत रंगलेली संगीताची मैफल.',
       imageUrl:
         'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80',
-      quote: '“दोन मनांची स्पंदने एकाच तालात धडकू लागली.”',
+      quote: '',
     },
     {
       year: 'शुभ विवाह • २०२६',
@@ -34,27 +33,17 @@ export const StorySection: React.FC = () => {
   ];
 
   return (
-    <section id="story" className="relative py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="story" className="relative pt-4 pb-2 px-4 sm:px-6 max-w-6xl mx-auto">
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
-        <div className="flex items-center justify-center gap-2 mb-3">
-          <Sparkles className="h-4 w-4 text-amber-600" />
-          <span className="font-devanagari text-xs tracking-wider uppercase text-amber-900 font-bold">
-            कथा रेशीमगाठीची
-          </span>
-          <Sparkles className="h-4 w-4 text-amber-600" />
-        </div>
+      <div className="text-center max-w-2xl mx-auto mb-8">
         <h2 className="font-rozha text-4xl sm:text-5xl font-normal text-red-950">
           कशी जुळली ही रेशीमगाठ?
         </h2>
-        <div className="my-4 h-px w-24 mx-auto bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
-        <p className="font-devanagari text-base sm:text-lg text-amber-950">
-          दोन जीवांचा सुखद प्रवास, संस्कारांचा आणि अतूट प्रेमाचा संगम
-        </p>
+        <div className="mt-4 h-px w-24 mx-auto bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
       </div>
 
       {/* Story Timeline in Light Palette */}
-      <div className="space-y-16">
+      <div className="space-y-10">
         {milestones.map((item, index) => {
           const isEven = index % 2 === 1;
           return (
@@ -93,11 +82,13 @@ export const StorySection: React.FC = () => {
                 <p className="font-sans-montserrat text-sm leading-relaxed text-stone-700 font-normal">
                   {item.description}
                 </p>
-                <div className="pt-2 border-l-2 border-amber-600 pl-4 my-2">
-                  <p className="font-devanagari text-base text-red-900 font-semibold italic">
-                    {item.quote}
-                  </p>
-                </div>
+                {item.quote && (
+                  <div className="pt-2 border-l-2 border-amber-600 pl-4 my-2">
+                    <p className="font-devanagari text-base text-red-900 font-semibold italic">
+                      {item.quote}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           );

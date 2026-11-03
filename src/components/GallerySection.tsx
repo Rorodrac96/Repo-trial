@@ -52,9 +52,9 @@ export const GallerySection: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="relative py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="gallery" className="relative pt-4 pb-4 px-4 sm:px-6 max-w-6xl mx-auto">
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="text-center max-w-2xl mx-auto mb-8">
         <div className="flex items-center justify-center gap-2 mb-3">
           <Sparkles className="h-4 w-4 text-amber-600" />
           <span className="font-devanagari text-xs tracking-wider uppercase text-amber-900 font-bold">
@@ -86,16 +86,9 @@ export const GallerySection: React.FC = () => {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-red-950/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
-                <span className="font-devanagari text-xs text-amber-300 font-bold">
-                  {photo.category}
-                </span>
-                <p className="font-devanagari text-base font-bold text-amber-100 mt-1">
-                  {photo.caption}
-                </p>
-                <div className="mt-2 flex items-center gap-1.5 text-xs text-amber-200">
-                  <Eye className="h-3.5 w-3.5" />
-                  <span className="font-devanagari text-xs font-bold">मोठे करून पहा</span>
+              <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/60 text-amber-200 backdrop-blur-sm border border-amber-400/40 shadow-lg">
+                  <Eye className="h-6 w-6" />
                 </div>
               </div>
             </div>
@@ -129,17 +122,9 @@ export const GallerySection: React.FC = () => {
           >
             <img
               src={photos[activePhotoIndex].url}
-              alt={photos[activePhotoIndex].caption}
-              className="max-h-[72vh] w-auto rounded-xl shadow-2xl object-contain border-2 border-amber-400"
+              alt="शुभ क्षण"
+              className="max-h-[78vh] w-auto rounded-xl shadow-2xl object-contain border-2 border-amber-400"
             />
-            <div className="mt-4 text-center">
-              <span className="font-devanagari text-xs text-amber-300 font-bold">
-                {photos[activePhotoIndex].category}
-              </span>
-              <p className="font-devanagari text-lg text-white font-bold mt-1">
-                {photos[activePhotoIndex].caption}
-              </p>
-            </div>
           </div>
 
           <button
