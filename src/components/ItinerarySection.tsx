@@ -6,10 +6,10 @@ export const ItinerarySection: React.FC = () => {
   const schedule: ScheduleItem[] = [
     {
       id: 'sakharpuda',
-      marathiTitle: 'साखरपुडा, हळद, मेंदी व संगीत सोहळा',
+      marathiTitle: 'साखरपुडा, हळद, मेहंदी व संगीत सोहळा',
       time: 'मंगळवार, २४ नोव्हेंबर • संध्याकाळी ०६:०० वा.',
       location: 'राहते घर, पिंपरी निर्मळ',
-      description: 'साखरपुडा (सुवर्ण मुद्रिका प्रदान सोहळा), सुवासिक हळद, हातांवर सुबक मेंदी आणि सहकुटुंब संगीताची रंगतदार मैफल.',
+      description: 'साखरपुडा (सुवर्ण मुद्रिका प्रदान सोहळा), सुवासिक हळद, हातांवर सुबक मेहंदी आणि सहकुटुंब संगीताची रंगतदार मैफल.',
       icon: 'award',
     },
     {
@@ -25,7 +25,7 @@ export const ItinerarySection: React.FC = () => {
       marathiTitle: 'पारंपारिक पंगत (शाही भोजन)',
       time: 'बुधवार, २५ नोव्हेंबर • सकाळी ११:०० ते दुपारी ०२:०० वा.',
       location: 'अन्नपूर्णा भोजन दालन',
-      description: 'केळीच्या पानांवर साजूक तुपातील गरमागरम पुरणपोळी, श्रीखंड-पुरी, मसाले भात, आमटी आणि थंडगार सोलकढीची पंगत.',
+      description: '',
       icon: 'puja',
     },
     {
@@ -114,9 +114,11 @@ export const ItinerarySection: React.FC = () => {
                 </h3>
               </div>
 
-              <p className="font-devanagari text-sm text-stone-700 leading-relaxed font-normal">
-                {item.description}
-              </p>
+              {item.description && (
+                <p className="font-devanagari text-sm text-stone-700 leading-relaxed font-normal">
+                  {item.description}
+                </p>
+              )}
 
               <div className="mt-4 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-devanagari text-amber-900 font-bold">
                 <span>{item.id !== 'vaarat' ? 'पारंपारिक विधी सोहळा' : ''}</span>
