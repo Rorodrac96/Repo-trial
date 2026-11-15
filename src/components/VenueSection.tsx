@@ -9,7 +9,7 @@ interface VenueSectionProps {
 export const VenueSection: React.FC<VenueSectionProps> = ({ details }) => {
   const cleanVenueName = details.venueName.replace(/\(.*?\)/g, '').trim();
   const cleanCityState = details.venueCityState.replace(/\(.*?\)/g, '').trim();
-  const googleMapsUrl = details.mapUrl || 'https://maps.app.goo.gl/uDwC5woq1nAATGsa9';
+  const googleMapsUrl = details.mapUrl || 'https://maps.app.goo.gl/UTpj1FPffUH3XqYc8?g_st=iw';
 
   return (
     <section id="venue" className="relative pt-2 pb-4 px-4 sm:px-6 max-w-4xl mx-auto text-center">

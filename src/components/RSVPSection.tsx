@@ -55,13 +55,13 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ details }) => {
 
           <div className="pt-2">
             <a
-              href={details.mapUrl || 'https://maps.app.goo.gl/uDwC5woq1nAATGsa9'}
+              href={details.mapUrl || 'https://maps.app.goo.gl/UTpj1FPffUH3XqYc8?g_st=iw'}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-amber-600/40 bg-amber-100/70 px-4 py-1.5 font-devanagari text-xs font-bold text-red-950 hover:bg-amber-200 transition"
             >
               <MapPin className="h-3.5 w-3.5 text-red-800" />
-              <span>गुगल मॅप्सवर स्थान पहा (नंदनवन लॉन्स)</span>
+              <span>गुगल मॅप्सवर स्थान पहा (नंदनबन लॉन्स)</span>
             </a>
           </div>
 
