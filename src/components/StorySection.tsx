@@ -62,7 +62,7 @@ export const StorySection: React.FC = () => {
     {
       chapterLabel: 'अध्याय ०१',
       sources: ['/assets/aistudio/Story1_9a0c0032.jpeg', '/story1.jpeg', '/story1.jpg'],
-      year: 'पहिला संवाद • २०२२',
+      year: 'पहिला संवाद • ऑगस्ट २०२६',
       title: 'पहिल्या भेटीची गोड आठवण',
       description:
         'पुण्याच्या ऐतिहासिक वातावरणात, आदरणीय कुटुंबीयांच्या साक्षीने झालेली पहिली औपचारिक भेट.',
